@@ -45,6 +45,7 @@ def times(stats):
                         duration_ratio_relative * 100.0,
                         duration,
                         ])
+    results.sort(key=lambda r: r[1])
     return results
 
 def times_summary(stats):
