@@ -21,9 +21,3 @@ def get_git_version():
     return git_time.strftime('%Y.%m.%d') + '.' + git_info[1]
 
 __version__ = get_git_version()
-
-from django_statsd import patches
-from django_statsd import clients
-from django_statsd import celery
-
-from django_statsd.plugins import NoseStatsd
