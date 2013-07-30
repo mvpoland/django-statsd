@@ -1,10 +1,10 @@
 from setuptools import setup
-
+import django_statsd
 
 setup(
     # Because django-statsd was taken, I called this django-statsd-mozilla.
     name='django-statsd-mozilla',
-    version='0.3.8.7',
+    version=django_statsd.__version__,
     description='Django interface with statsd',
     long_description=open('README.rst').read(),
     author='Andy McKay',
