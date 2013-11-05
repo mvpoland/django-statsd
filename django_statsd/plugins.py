@@ -9,8 +9,6 @@ except ImportError:
     class Plugin:
         pass
 
-from django_statsd.clients import statsd
-
 log = logging.getLogger(__name__)
 
 
@@ -24,6 +22,7 @@ class NoseStatsd(Plugin):
         super(NoseStatsd, self).configure(options, conf)
 
     def report(self, stream):
+        from django_statsd.clients import statsd
         def write(line):
             stream.writeln('%s' % line)
 
