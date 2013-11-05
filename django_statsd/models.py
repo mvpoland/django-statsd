@@ -2,8 +2,6 @@ from django_statsd import patches
 from django_statsd import clients
 from django_statsd import celery
 
-from django_statsd.plugins import NoseStatsd
-
 from django.db.models.signals import post_save, post_delete
 from django.conf import settings
 from django_statsd.clients import statsd

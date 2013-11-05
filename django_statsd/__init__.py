@@ -2,6 +2,8 @@ import datetime
 import os
 import subprocess
 
+from django_statsd.plugins import NoseStatsd
+
 def get_git_version():
     git_dir = os.path.abspath(
         os.path.join(
