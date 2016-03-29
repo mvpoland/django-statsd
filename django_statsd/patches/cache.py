@@ -16,6 +16,8 @@ class StatsdTracker(BaseCache):
     def __getattribute__(self, attr):
         if attr == 'cache':
             return BaseCache.__getattribute__(self, attr)
+        if attr == 'default_timeout':
+            return self.cache.default_timeout
         return wrap(getattr(self.cache, attr), key(self.cache, attr))
 
 
